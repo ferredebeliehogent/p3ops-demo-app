@@ -100,3 +100,8 @@
     networks_cli_compatible: true
     network_mode: default
   tags: p3ops-demo-app
+
+- name: Run docker-compose command
+  ansible.builtin.command:
+    chdir: /vagrant
+    cmd: docker-compose up -d
