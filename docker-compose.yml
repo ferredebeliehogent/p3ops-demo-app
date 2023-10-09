@@ -11,7 +11,7 @@ services:
       - DOTNET_ConnectionStrings__SqlDatabase=Server=db;Database=SportStore;User Id=sa;Password=ChangeMe123!;
       - DOTNET_ENVIRONMENT=Production
     ports:
-      - "80:5000"
+      - "8001:5000"
     links:
       - db
     restart: always
