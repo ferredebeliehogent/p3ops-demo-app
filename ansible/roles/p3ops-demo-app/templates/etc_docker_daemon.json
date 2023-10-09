@@ -1,0 +1,4 @@
+{
+  "metrics-addr" : "{{ demo_ip }}:9323",
+  "experimental" : true
+}

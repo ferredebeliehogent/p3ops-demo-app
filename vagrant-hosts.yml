@@ -1,0 +1,5 @@
+- name: p3ops-demo-app
+  ip: 192.168.56.30
+  box: bento/ubuntu-22.04
+  memory: 4096
+  cpus: 2

@@ -1,0 +1,4 @@
+demo_subnet: "172.30.0.0/16"
+demo_ip: "172.30.0.1"
+demo_volumes:
+  - portainer_data

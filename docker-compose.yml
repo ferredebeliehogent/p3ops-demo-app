@@ -1,0 +1,25 @@
+version: '3.0'
+
+services:
+  app:
+    container_name: app
+    image: app:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - DOTNET_ConnectionStrings__SqlDatabase=Server=db;Database=SportStore;User Id=sa;Password=ChangeMe123!;
+      - DOTNET_ENVIRONMENT=Production
+    ports:
+      - "80:5000"
+    links:
+      - db
+    restart: always
+  db:
+    container_name: db
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=ChangeMe123!
+      - MSSQL_PID=Standard
+    restart: always

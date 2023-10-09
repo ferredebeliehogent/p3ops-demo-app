@@ -1,0 +1,22 @@
+demo_packages:
+  - bash-completion
+  - bats
+  - ctop
+  - curl
+  - dnsutils
+  - docker
+  - docker-compose
+  - git
+  - jq
+  - mysql-client
+  - python3-pip
+  - silversearcher-ag
+  - tree
+
+demo_pip_packages:
+  - docker
+  - netaddr
+  - yamllint
+
+demo_services:
+  - docker.service

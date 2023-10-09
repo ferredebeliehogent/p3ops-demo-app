@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
+using System.Net;
 
 namespace Server
 {
@@ -15,6 +16,10 @@ namespace Server
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
+                    webBuilder.ConfigureKestrel((context, options) =>
+                    {
+                        options.Listen(IPAddress.Parse("0.0.0.0"), 5000);  // Kestrel luistert op alle netwerkinterfaces op poort 5000
+                    });
                 });
     }
 }
